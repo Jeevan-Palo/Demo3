@@ -32,9 +32,6 @@ jobs:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
- executors:
-  with-chrome:
-    docker:
       - image: 'cypress/browsers:chrome69'
         environment:
           TERM: xterm
