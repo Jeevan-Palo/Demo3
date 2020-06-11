@@ -47,6 +47,8 @@ jobs:
           path: cypress/screenshots
       - store_artifacts:
           path: cypress/reports
+      - store_artifacts:
+          path: mochawesome-report          
           
   test2:
     working_directory: ~/tmp
@@ -68,7 +70,8 @@ jobs:
           path: cypress/screenshots
       - store_artifacts:
           path: cypress/reports          
-       
+      - store_artifacts:
+          path: mochawesome-report        
   
 
 workflows:
