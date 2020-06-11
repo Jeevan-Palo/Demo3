@@ -52,10 +52,6 @@ jobs:
           
   test2:
     working_directory: ~/tmp
-    docker:
-      - image: 'cypress/base:10'
-        environment:
-          TERM: xterm
     steps:
       - attach_workspace:
           at: ~/
@@ -67,9 +63,7 @@ jobs:
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
-          path: cypress/screenshots
-      - store_artifacts:
-          path: cypress/reports          
+          path: cypress/screenshots       
       - store_artifacts:
           path: mochawesome-report        
   
