@@ -2,7 +2,7 @@
     "baseUrl" : "https://www.google.com/",
     
     "watchForFileChanges": false,
-    "video": false,
+    "video": true,
     "reporter": "cypress-multi-reporters",
     "reporterOptions": {
         "reporterEnabled": "mochawesome",
