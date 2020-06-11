@@ -37,10 +37,10 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: ls -la cypress
-      - run: ls -la cypress/integration
+      - run: ls -la cypress/integration/E2E/
       - run:
           name: Running cypress tests 1
-          command: $(npm bin)/cypress run cypress/integration/E2E/
+          command: $(npm bin)/cypress run
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -56,10 +56,10 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: ls -la cypress
-      - run: ls -la cypress/integration
+      - run: ls -la cypress/integration/smoke/
       - run:
           name: Running cypress tests 2
-          command: $(npm bin)/cypress run cypress/integration/smoke/
+          command: $(npm bin)/cypress run 
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
