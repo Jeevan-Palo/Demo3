@@ -16,7 +16,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
-      - run: npm run semantic-release
+      - run: npm run test
 
 workflows:
   build:
@@ -24,7 +24,7 @@ workflows:
       # checks out code and installs dependencies once
       - cypress/install:
           # and builds the app using this command
-          build: 'npm run build'
+          #build: 'npm run build'
 
       # runs on 3 machines, load balances tests
       # and records on Cypress Dashboard
