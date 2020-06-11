@@ -5,6 +5,7 @@ jobs:
     working_directory: ~/tmp
     docker:
       - image: 'cypress/base:10'
+      parallelism: 4
         environment:
           TERM: xterm
     steps:
