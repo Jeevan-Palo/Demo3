@@ -40,7 +40,7 @@ jobs:
       - run: ls -la cypress/integration
       - run:
           name: Running cypress tests 1
-          command: $(npm bin)/cypress run --browser chrome --spec cypress/integration/E2E/*.js --reporter mochawesome --reporter-options "reportFilename=E2E"
+          command: $(npm bin)/cypress run --spec cypress/integration/E2E/*.js --reporter mochawesome --reporter-options "reportFilename=E2E"
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
@@ -63,7 +63,7 @@ jobs:
       - run: ls -la cypress/integration/
       - run:
           name: Running cypress tests 2
-          command: $(npm bin)/cypress run --browser firefox --spec cypress/integration/Smoke/*.js  --reporter mochawesome --reporter-options "reportFilename=smoke"
+          command: $(npm bin)/cypress run  --spec cypress/integration/Smoke/*.js  --reporter mochawesome --reporter-options "reportFilename=smoke"
       - store_artifacts:
           path: cypress/videos
       - store_artifacts:
