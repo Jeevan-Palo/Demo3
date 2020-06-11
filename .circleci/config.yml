@@ -45,7 +45,9 @@ jobs:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
-      
+      - store_artifacts:
+          path: cypress/reports
+          
   test2:
     working_directory: ~/tmp
     docker:
@@ -64,6 +66,8 @@ jobs:
           path: cypress/videos
       - store_artifacts:
           path: cypress/screenshots
+      - store_artifacts:
+          path: cypress/reports          
        
   
 
